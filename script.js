@@ -18,6 +18,8 @@ document.getElementById("summonerSubmit").addEventListener("click", function(eve
             console.log(json);
             if (json.hasOwnProperty("status")) {
                 document.getElementById("results").innerHTML = "<br><p>Summoner Not Found</p>";
+                document.getElementById("getLowChampion").style.visibility = "hidden";
+                document.getElementById("getHighChampion").style.visibility = "hidden";
                 return;
             }
             document.getElementById("getLowChampion").style.visibility = "visible";
@@ -50,7 +52,7 @@ document.getElementById("getLowChampion").addEventListener("click", function(eve
             console.log(json);
 
             let champOutput = "";
-            champOutput += "<p>Champions never played (at least since 5/6/2015): </p>"
+            champOutput += "<h2>Champions never played (at least since 5/6/2015): </h2>"
             let nameKeys = Object.keys(championJson.data);
             for (let i = 0; i < nameKeys.length; i++) {
                 if (!hasBeenPlayed(json, championJson.data[nameKeys[i]].key)) {
