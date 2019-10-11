@@ -2,17 +2,36 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="utf-8" />
+    <title>League API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <form>
-        <label>Enter a U.S. city</label>
-        <input id="weatherInput" type="text"></input><br/>
-        <input id="weatherSubmit" type="submit" value="Submit"></input>
-    </form>
+    <div id="page-container">
+        <div id="content-wrap">
+            <form>
+                <label>Enter a Summoner Name</label>
+                <input id="summonerInput" type="text"></input>
+                <input id="summonerSubmit" type="submit" value="Submit"></input><br>
+                <input id="getHighChampion" type="submit" value="Most Played Champions"></input>
+                <input id="getLowChampion" type="submit" value="Champions Never Played"></input>
 
+
+            </form>
+
+            <div id="results"></div>
+            <div id="championResults"></div>
+        </div>
+
+
+        <footer>
+            <a href="https://github.com/morme2/CreativeProject2.git">GitHub Link</a>
+        </footer>
+    </div>
 </body>
 
+<script text="type/javascript" src="script.js"></script>
+
 </html>
- 
